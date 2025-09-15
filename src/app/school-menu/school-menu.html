@@ -1,0 +1,57 @@
+
+<div class="menu-container">
+
+    <div class="student-details">
+        <h2>{{studentname}}</h2>
+        <h3>{{school}}, {{studentClass}}</h3>
+    </div>
+    <div class="date-nav">
+        <button (click)="prevDay()" >◄</button>
+        <div class="current-day">
+            <div class="day">{{ currentDay.getDate() }}</div>
+            <div class="month">{{ currentDay | date: 'MMMM' }}</div>
+        </div>
+        <button (click)="nextDay()" >►</button>
+    </div>
+    <div *ngIf="currentMenu; else noMenu">
+        <div class="menu-section"> 
+            <h3>COLAZIONE</h3> 
+            <div class="item"> 
+                <img [src]="currentMenu.breakfast.image" alt="colazione" /> 
+                <span>{{ currentMenu.breakfast.name }}</span> 
+            </div>
+         </div> 
+         <div class="menu-section"> 
+            <h3>PRIMO PIATTO</h3> 
+            <div class="item"> 
+                <img [src]="currentMenu.primo.image" alt="primo" />
+                <span>{{ currentMenu.primo.name }}</span> 
+            </div> 
+        </div> 
+        <div class="menu-section"> 
+            <h3>SECONDO PIATTO</h3>
+            <div class="item">
+                <img [src]="currentMenu.secondo.image" alt="secondo" /> 
+                <span>{{ currentMenu.secondo.name }}</span> 
+            </div> 
+        </div> 
+        <div class="menu-section"> 
+            <h3>CONTORNO</h3> 
+            <div class="item"> 
+                <img [src]="currentMenu.contorno.image" alt="contorno" /> 
+                <span>{{ currentMenu.contorno.name }}</span> 
+            </div> 
+        </div> 
+        <div class="menu-section"> 
+            <h3>FRUTTA/DOLCE</h3> 
+            <div class="item"> 
+                <img [src]="currentMenu.dolceFruitta.image" alt="frutta" /> 
+                <span>{{ currentMenu.dolceFruitta.name }}</span> 
+            </div> 
+            </div>
+
+    </div>
+    <ng-template #noMenu>
+        <p>No menu is available for this Day</p>
+    </ng-template>
+</div>
