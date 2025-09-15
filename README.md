@@ -1,3 +1,9 @@
+# My intention on this repository
+```
+I just wanted to learn Angular framwork and kinda enjoyng it, hope i can learn more!
+```
+
+
 # MenuSchool
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.2.
