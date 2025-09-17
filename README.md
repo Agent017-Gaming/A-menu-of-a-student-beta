@@ -2,7 +2,12 @@
 ```
 I just wanted to learn Angular framwork and kinda enjoyng it, hope i can learn more!
 ```
+# update
 
+
+```
+Made a lot of changes to make it look like a responsive site
+```
 
 # MenuSchool
 

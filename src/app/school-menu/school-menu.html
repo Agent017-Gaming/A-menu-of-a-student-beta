@@ -1,17 +1,26 @@
 
 <div class="menu-container">
-
-    <div class="student-details">
-        <h2>{{studentName}}</h2>
-        <h3>{{school}}, {{studentClass}}</h3>
+    <div class="header">
+        <div class="student-details">
+            <h2>{{studentName}}</h2>
+            <h3>{{school}}, {{studentClass}}</h3>
+        </div>
+        <div class="header-title">
+            <h1>{{ title }}</h1>
+        </div>
+        <div class="menu-button" (click)="showWorkMessage()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </div>
     <div class="date-nav">
-        <button (click)="prevDay()" >◄</button>
+        <button (click)="prevDay()" >{{ prevDayDate.getDate()}}<br>{{ prevDayDate | date: 'MMM' }}</button>
         <div class="current-day">
             <div class="day">{{ currentDay.getDate() }}</div>
-            <div class="month">{{ currentDay | date: 'MMMM' }}</div>
+            <div class="month">{{ currentDay | date: 'MMM' }}</div>
         </div>
-        <button (click)="nextDay()" >►</button>
+        <button (click)="nextDay()" >{{ nextDayDate.getDate()}}<br>{{ nextDayDate | date: 'MMM' }}</button>
     </div>
     <div *ngIf="currentMenu; else noMenu">
         <div class="menu-section"> 

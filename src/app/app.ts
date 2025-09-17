@@ -9,5 +9,4 @@ import { SchoolMenuComponent  } from './school-menu/school-menu';
   styleUrl: './app.css'
 })
 export class App {
-  title = 'School-Menu'
 }
