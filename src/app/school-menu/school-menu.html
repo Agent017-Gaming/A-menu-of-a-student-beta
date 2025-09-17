@@ -1,19 +1,25 @@
 
 <div class="menu-container">
     <div class="header">
-        <div class="student-details">
-            <h2>{{studentName}}</h2>
-            <h3>{{school}}, {{studentClass}}</h3>
-        </div>
-        <div class="header-title">
-            <h1>{{ title }}</h1>
-        </div>
-        <div class="menu-button" (click)="showWorkMessage()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+  <div class="header-left">
+    <div class="student-details">
+      <h2>{{studentName}}</h2>
+      <h3>{{school}}, {{studentClass}}</h3>
     </div>
+  </div>
+
+  <div class="header-center">
+    <h1>{{ title }}</h1>
+  </div>
+
+  <div class="header-right">
+    <div class="menu-button" (click)="showWorkMessage()" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</div>
     <div class="date-nav">
         <button (click)="prevDay()" >{{ prevDayDate.getDate()}}<br>{{ prevDayDate | date: 'MMM' }}</button>
         <div class="current-day">
