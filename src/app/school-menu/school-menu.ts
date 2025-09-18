@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-
-import { CommonModule } from '@angular/common';
 import { DailyMenu, MenuService } from '../services/menu-service';
+import { CommonModule, DatePipe } from '@angular/common';
 
 
 
 @Component({
   selector: 'app-school-menu',
-  standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, DatePipe],
   templateUrl: './school-menu.html',
   styleUrls: ['./school-menu.css']
 })
@@ -50,7 +48,9 @@ export class SchoolMenuComponent implements OnInit{
 
 
   private updateCurrentMenu(): void {
-    this.currentMenu = this.menuService.getMenuForDate(this.currentDay);
+    this.menuService.getMenuForDate(this.currentDay).subscribe(menu => {
+      this.currentMenu = menu;
+    });
   }
   private updateDays(): void{
     this.prevDayDate = new Date(this.currentDay);

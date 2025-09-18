@@ -1,12 +1,9 @@
 import { Component } from '@angular/core';
-import { SchoolMenuComponent  } from './school-menu/school-menu';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [SchoolMenuComponent],
+  standalone: false,
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
-export class App {
-}
+export class App {}

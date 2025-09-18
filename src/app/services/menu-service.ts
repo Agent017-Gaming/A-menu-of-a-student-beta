@@ -1,4 +1,8 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
+
 export interface MenuItem {
   name: string;
   image: string;
@@ -17,25 +21,26 @@ export interface DailyMenu{
   providedIn: 'root'
 })
 export class MenuService {
+
+  private menuUrl = 'assets/menu.json';
   studentName = 'Mario Rossi';
   school = 'Pinocchio';
   studentClass = '2/D';
-  menu: DailyMenu[]= [
-      {
-        date: new Date(2025, 8, 12),
-        breakfast: { name: 'Crostatina', image: 'assets/crostatina-ricomposta.jpg' },
-        primo: { name: 'Pasta al sugo', image: 'assets/pasta_al_sugo.jpg' },
-        secondo: { name: 'Pollo arrosto', image: 'assets/pollo_arrosto.jpg' },
-        contorno: { name: 'Patate arrosto', image: 'assets/patate-arrosto-perfette.jpg' },
-        dolceFruitta: { name: 'Mela', image: 'assets/apple.jpg' }
-      }
-    ];
-    getMenu():DailyMenu[] {
-      return [...this.menu];
-    }
-    getMenuForDate(date: Date): DailyMenu | undefined{
-      return this.menu.find(m=>
-        m.date.getFullYear() === date.getFullYear() && m.date.getMonth() === date.getMonth() && m.date.getDate() === date.getDate()
-      );
-    }
+  
+
+  constructor(private http: HttpClient) {}
+
+  getMenu(): Observable<DailyMenu[]> {
+    return this.http.get<DailyMenu[]>(this.menuUrl);
+  }
+
+  getMenuForDate(date: Date): Observable<DailyMenu | undefined> {
+    return this.getMenu().pipe(
+      map(menus =>
+        menus.find(m =>
+          new Date(m.date).toDateString() === date.toDateString()
+        )
+      )
+    );
+  }
 }
