@@ -71,7 +71,7 @@ export class SchoolMenu implements OnInit{
       this.router.navigate(['/meal', code]);
     }
   }
-  goToMeal(codice: string): void {
-    this.router.navigate(['/meal', codice]);
+  goToMeal(code: string): void {
+    this.router.navigate(['/meal', code]);
   }
 }
