@@ -13,6 +13,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./school-menu.css']
 })
 export class SchoolMenuComponent implements OnInit{
+  
   title = 'School-Menu'
   currentDay: Date =  new Date(2025, 8, 12);
   prevDayDate = new Date(this.currentDay);
@@ -69,5 +70,8 @@ export class SchoolMenuComponent implements OnInit{
     if (code) {
       this.router.navigate(['/meal', code]);
     }
+  }
+  goToMeal(codice: string): void {
+    this.router.navigate(['/meal', codice]);
   }
 }

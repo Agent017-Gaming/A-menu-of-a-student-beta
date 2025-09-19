@@ -31,8 +31,8 @@
     <div *ngIf="currentMenu; else noMenu">
         <div class="menu-section"> 
             <h3>COLAZIONE</h3> 
-            <div class="item"> 
-                <img [src]="currentMenu?.breakfast.image" alt="breakfast" (click)="viewDetail(currentMenu.breakfast.code)"/> 
+            <div class="item" (click)="goToMeal(currentMenu.breakfast.code)"> 
+                <img [src]="currentMenu.breakfast.image" alt="breakfast" /> 
                 <span>{{ currentMenu.breakfast.name }}</span> 
             </div>
          </div> 
