@@ -7,7 +7,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-meal-details',
   imports: [CommonModule],
   templateUrl: './meal-details.html',
-  styleUrl: './meal-details.css'
+  styleUrls: ['./meal-details.css']
 })
 export class MealDetails implements OnInit{
 

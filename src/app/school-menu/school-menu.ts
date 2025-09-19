@@ -8,11 +8,11 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-school-menu',
-  imports: [CommonModule, DatePipe],
+  standalone: false,
   templateUrl: './school-menu.html',
   styleUrls: ['./school-menu.css']
 })
-export class SchoolMenuComponent implements OnInit{
+export class SchoolMenu implements OnInit{
   
   title = 'School-Menu'
   currentDay: Date =  new Date(2025, 8, 12);
@@ -24,7 +24,7 @@ export class SchoolMenuComponent implements OnInit{
   school = '';
   studentClass = ''
 
-  constructor(private menuService: MenuService, private router: Router) {}
+  constructor(private menuService: MenuService, private router: Router,  private datePipe: DatePipe) {}
   
 
   ngOnInit(): void {
