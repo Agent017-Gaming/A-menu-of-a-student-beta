@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 export interface MenuItem {
+  code: string;
   name: string;
   image: string;
 }
@@ -11,16 +12,17 @@ export interface MenuItem {
 export interface DailyMenu{
     date: Date;
     breakfast: MenuItem;
-    primo: MenuItem;
-    secondo: MenuItem;
-    contorno: MenuItem;
-    dolceFruitta: MenuItem;
+    first: MenuItem;
+    second: MenuItem;
+    side: MenuItem;
+    dessertFruit: MenuItem;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class MenuService {
+
 
   private menuUrl = 'assets/menu.json';
   studentName = 'Mario Rossi';

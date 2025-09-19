@@ -1,0 +1,16 @@
+[
+  {
+    "code": "B001",
+    "name": "Succo",
+    "description": "Il succo di frutta viene dato al mattino ai bambini perchè...",
+    "quantity": "200ml",
+    "calorie": "110kcal"
+  },
+  {
+    "code": "P001",
+    "name": "Pasta al sugo",
+    "description": "Un piatto semplice e nutriente con pomodoro fresco...",
+    "quantity": "150g",
+    "calorie": "320kcal"
+  }
+]

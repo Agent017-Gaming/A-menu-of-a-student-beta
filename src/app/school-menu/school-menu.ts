@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DailyMenu, MenuService } from '../services/menu-service';
 import { CommonModule, DatePipe } from '@angular/common';
+import { Router } from '@angular/router';
+
 
 
 
@@ -21,7 +23,8 @@ export class SchoolMenuComponent implements OnInit{
   school = '';
   studentClass = ''
 
-  constructor(private menuService: MenuService) {}
+  constructor(private menuService: MenuService, private router: Router) {}
+  
 
   ngOnInit(): void {
     this.studentName = this.menuService.studentName;
@@ -61,5 +64,10 @@ export class SchoolMenuComponent implements OnInit{
   }
   showWorkMessage(): void {
     alert("Still on work");
+  }
+  viewDetail(code?: string): void {
+    if (code) {
+      this.router.navigate(['/meal', code]);
+    }
   }
 }

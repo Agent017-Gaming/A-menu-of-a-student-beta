@@ -1,3 +1,4 @@
+import { AppRoutingModule } from './app.routes';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
@@ -13,6 +14,7 @@ import { SchoolMenuComponent } from './school-menu/school-menu';
     BrowserModule,
     HttpClientModule,
     SchoolMenuComponent,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [App]

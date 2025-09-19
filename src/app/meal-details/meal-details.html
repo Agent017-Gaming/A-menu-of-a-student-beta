@@ -1,0 +1,12 @@
+<div *ngIf="meal; else notFound">
+  <h2>{{ meal.name }}</h2>
+  <p>{{ meal.descrizione }}</p>
+  <p><strong>Quantity:</strong> {{ meal.quantity }}</p>
+  <p><strong>Calorie:</strong> {{ meal.calorie }}</p>
+
+  <button (click)="goBack()">⬅ Return back</button>
+</div>
+
+<ng-template #notFound>
+  <p>We dont have any data for this meal, We are sorry</p>
+</ng-template>

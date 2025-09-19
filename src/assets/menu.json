@@ -1,10 +1,10 @@
-[
+[  
   {
-    "date": "2025-09-12",
-    "breakfast": { "name": "Crostatina", "image": "assets/crostatina-ricomposta.jpg" },
-    "primo": { "name": "Pasta al sugo", "image": "assets/pasta_al_sugo.jpg" },
-    "secondo": { "name": "Pollo arrosto", "image": "assets/pollo_arrosto.jpg" },
-    "contorno": { "name": "Patate arrosto", "image": "assets/patate-arrosto-perfette.jpg" },
-    "dolceFruitta": { "name": "Mela", "image": "assets/apple.jpg" }
+    "date": "2025-09-15",
+    "breakfast": { "codice": "B001", "name": "Succo", "image": "assets/crostatina-ricomposta.jpg" },
+    "first": { "codice": "P001", "name": "Pasta al sugo", "image": "assets/pasta_al_sugo.jpg" },
+    "second": { "codice": "S001", "name": "Pollo arrosto", "image": "assets/pollo_arrosto.jpg" },
+    "side": { "codice": "C001", "name": "Patate arrosto", "image": "assets/patate-arrosto-perfette.jpg" },
+    "dessertFruit": { "codice": "DF001", "name": "Mela", "image": "assets/apple.jpg" }
   }
 ]

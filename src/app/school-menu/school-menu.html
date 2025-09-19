@@ -32,36 +32,36 @@
         <div class="menu-section"> 
             <h3>COLAZIONE</h3> 
             <div class="item"> 
-                <img [src]="currentMenu.breakfast.image" alt="colazione" /> 
+                <img [src]="currentMenu?.breakfast.image" alt="breakfast" (click)="viewDetail(currentMenu.breakfast.code)"/> 
                 <span>{{ currentMenu.breakfast.name }}</span> 
             </div>
          </div> 
          <div class="menu-section"> 
-            <h3>PRIMO PIATTO</h3> 
+            <h3>FIRST PLATE</h3> 
             <div class="item"> 
-                <img [src]="currentMenu.primo.image" alt="primo" />
-                <span>{{ currentMenu.primo.name }}</span> 
+                <img [src]="currentMenu.first.image" alt="first" />
+                <span>{{ currentMenu.first.name }}</span> 
             </div> 
         </div> 
         <div class="menu-section"> 
-            <h3>SECONDO PIATTO</h3>
+            <h3>SECOND PLATE</h3>
             <div class="item">
-                <img [src]="currentMenu.secondo.image" alt="secondo" /> 
-                <span>{{ currentMenu.secondo.name }}</span> 
+                <img [src]="currentMenu.second.image" alt="second" /> 
+                <span>{{ currentMenu.second.name }}</span> 
             </div> 
         </div> 
         <div class="menu-section"> 
-            <h3>CONTORNO</h3> 
+            <h3>SIDE MEAL</h3> 
             <div class="item"> 
-                <img [src]="currentMenu.contorno.image" alt="contorno" /> 
-                <span>{{ currentMenu.contorno.name }}</span> 
+                <img [src]="currentMenu.side.image" alt="side" /> 
+                <span>{{ currentMenu.side.name }}</span> 
             </div> 
         </div> 
         <div class="menu-section"> 
-            <h3>FRUTTA/DOLCE</h3> 
+            <h3>DESSERT / FRUIT</h3> 
             <div class="item"> 
-                <img [src]="currentMenu.dolceFruitta.image" alt="frutta" /> 
-                <span>{{ currentMenu.dolceFruitta.name }}</span> 
+                <img [src]="currentMenu.dessertFruit.image" alt="frutta" /> 
+                <span>{{ currentMenu.dessertFruit.name }}</span> 
             </div> 
             </div>
 
