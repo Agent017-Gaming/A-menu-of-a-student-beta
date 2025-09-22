@@ -1,10 +1,81 @@
-[  
+[  {
+    "date": "2025-09-01",
+    "breakfast": { "code": "B001", "name": "Succo", "image": "assets/crostatina-ricomposta.jpg" },
+    "first": { "code": "P001", "name": "Pasta al sugo", "image": "assets/pasta_al_sugo.jpg" },
+    "second": { "code": "S001", "name": "Pollo arrosto", "image": "assets/pollo_arrosto.jpg" },
+    "side": { "code": "C001", "name": "Patate arrosto", "image": "assets/patate-arrosto-perfette.jpg" },
+    "dessertFruit": { "code": "DF001", "name": "Mela", "image": "assets/apple.jpg" }
+  },
   {
-    "date": "2025-09-15",
-    "breakfast": { "codice": "B001", "name": "Succo", "image": "assets/crostatina-ricomposta.jpg" },
-    "first": { "codice": "P001", "name": "Pasta al sugo", "image": "assets/pasta_al_sugo.jpg" },
-    "second": { "codice": "S001", "name": "Pollo arrosto", "image": "assets/pollo_arrosto.jpg" },
-    "side": { "codice": "C001", "name": "Patate arrosto", "image": "assets/patate-arrosto-perfette.jpg" },
-    "dessertFruit": { "codice": "DF001", "name": "Mela", "image": "assets/apple.jpg" }
+    "date": "2025-09-02",
+    "breakfast": { "code": "B002", "name": "Latte e biscotti", "image": "assets/biscotti.jpg" },
+    "first": { "code": "P002", "name": "Riso al pomodoro", "image": "assets/riso_al_pomodoro.jpg" },
+    "second": { "code": "S002", "name": "Filetto di pesce", "image": "assets/filetto_pesce.jpg" },
+    "side": { "code": "C002", "name": "Insalata mista", "image": "assets/insalata.jpg" },
+    "dessertFruit": { "code": "DF002", "name": "Banana", "image": "assets/banana.jpg" }
+  },
+  {
+    "date": "2025-09-03",
+    "breakfast": { "code": "B003", "name": "Yogurt e cereali", "image": "assets/yogurt_cereali.jpg" },
+    "first": { "code": "P003", "name": "Lasagne", "image": "assets/lasagne.jpg" },
+    "second": { "code": "S003", "name": "Polpettone", "image": "assets/polpettone.jpg" },
+    "side": { "code": "C003", "name": "Carote al vapore", "image": "assets/carrots.jpg" },
+    "dessertFruit": { "code": "DF003", "name": "Pera", "image": "assets/pera.jpg" }
+  },
+  {
+    "date": "2025-09-04",
+    "breakfast": { "code": "B004", "name": "Pane e marmellata", "image": "assets/pane_marmellata.jpg" },
+    "first": { "code": "P004", "name": "Gnocchi al pomodoro", "image": "assets/gnocchi.jpg" },
+    "second": { "code": "S004", "name": "Tacchino arrosto", "image": "assets/tacchino.jpg" },
+    "side": { "code": "C004", "name": "Zucchine", "image": "assets/zucchine.jpg" },
+    "dessertFruit": { "code": "DF004", "name": "Kiwi", "image": "assets/kiwi.jpg" }
+  },
+  {
+    "date": "2025-09-05",
+    "breakfast": { "code": "B005", "name": "Caffè e cornetto", "image": "assets/cornetto.jpg" },
+    "first": { "code": "P005", "name": "Pasta con verdure", "image": "assets/pasta_verdure.jpg" },
+    "second": { "code": "S005", "name": "Salmone al forno", "image": "assets/salmone.jpg" },
+    "side": { "code": "C005", "name": "Piselli al vapore", "image": "assets/piselli.jpg" },
+    "dessertFruit": { "code": "DF005", "name": "Arancia", "image": "assets/arancia.jpg" }
+  },
+  {
+    "date": "2025-09-06",
+    "breakfast": { "code": "B006", "name": "Frutta fresca", "image": "assets/frutta.jpg" },
+    "first": { "code": "P006", "name": "Risotto ai funghi", "image": "assets/risotto_funghi.jpg" },
+    "second": { "code": "S006", "name": "Bistecca", "image": "assets/bistecca.jpg" },
+    "side": { "code": "C006", "name": "Spinaci al vapore", "image": "assets/spinaci.jpg" },
+    "dessertFruit": { "code": "DF006", "name": "Uva", "image": "assets/uva.jpg" }
+  },
+  {
+    "date": "2025-09-07",
+    "breakfast": { "code": "B007", "name": "Latte e cereali", "image": "assets/latte_cereali.jpg" },
+    "first": { "code": "P007", "name": "Pasta al pesto", "image": "assets/pasta_pesto.jpg" },
+    "second": { "code": "S007", "name": "Pollo al forno", "image": "assets/pollo_forno.jpg" },
+    "side": { "code": "C001", "name": "Patate arrosto", "image": "assets/patate-arrosto-perfette.jpg" },
+    "dessertFruit": { "code": "DF007", "name": "Tiramisù ", "image": "assets/tiramisu.jpg" }
+  },
+  {
+    "date": "2025-09-08",
+    "breakfast": { "code": "B008", "name": "Pane e burro", "image": "assets/pane_burro.jpg" },
+    "first": { "code": "P008", "name": "Pasta al ragù", "image": "assets/pasta_ragu.jpg" },
+    "second": { "code": "S008", "name": "Polpettine", "image": "assets/polpettine.jpg" },
+    "side": { "code": "C007", "name": "Insalata verde", "image": "assets/insalata_verde.jpg" },
+    "dessertFruit": { "code": "DF008", "name": "Fragole", "image": "assets/fragole.jpg" }
+  },
+  {
+    "date": "2025-09-09",
+    "breakfast": { "code": "B002", "name": "Latte e biscotti", "image": "assets/biscotti.jpg" },
+    "first": { "code": "P009", "name": "Riso con verdure", "image": "assets/riso_verdure.jpg" },
+    "second": { "code": "S009", "name": "Pesce al vapore", "image": "assets/pesce.jpg" },
+    "side": { "code": "C004", "name": "Zucchine", "image": "assets/zucchine.jpg" },
+    "dessertFruit": { "code": "DF003", "name": "Pera", "image": "assets/pera.jpg" }
+  },
+  {
+    "date": "2025-09-10",
+    "breakfast": { "code": "B010", "name": "Yogurt e frutta", "image": "assets/yogurt_frutta.jpg" },
+    "first": { "code": "P004", "name": "Gnocchi al pomodoro", "image": "assets/gnocchi.jpg" },
+    "second": { "code": "S004", "name": "Tacchino arrosto", "image": "assets/tacchino.jpg" },
+    "side": { "code": "C003", "name": "Carote al vapore", "image": "assets/carrots.jpg" },
+    "dessertFruit": { "code": "DF002", "name": "Banana", "image": "assets/banana.jpg" }
   }
 ]

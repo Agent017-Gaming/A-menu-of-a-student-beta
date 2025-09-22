@@ -2,15 +2,302 @@
   {
     "code": "B001",
     "name": "Succo",
-    "description": "Il succo di frutta viene dato al mattino ai bambini perchè...",
+    "description": "Un bicchiere di succo di frutta fresco, preparato con frutta di stagione selezionata, ideale per iniziare la giornata con energia.",
     "quantity": "200ml",
     "calorie": "110kcal"
   },
   {
+    "code": "B002",
+    "name": "Latte e biscotti",
+    "description": "Latte fresco accompagnato da biscotti croccanti al burro, perfetto per una colazione bilanciata e gustosa.",
+    "quantity": "250ml + 2 biscotti",
+    "calorie": "180kcal"
+  },
+  {
+    "code": "B003",
+    "name": "Yogurt e cereali",
+    "description": "Yogurt cremoso con cereali integrali croccanti, arricchito con una leggera nota di miele naturale.",
+    "quantity": "150g yogurt + 30g cereali",
+    "calorie": "160kcal"
+  },
+  {
+    "code": "B004",
+    "name": "Pane e marmellata",
+    "description": "Fette di pane tostato accompagnate da marmellata di frutta fresca, ideale per una colazione semplice ma nutriente.",
+    "quantity": "2 fette",
+    "calorie": "150kcal"
+  },
+  {
+    "code": "B005",
+    "name": "Caffè e cornetto",
+    "description": "Cornetto caldo e fragrante accompagnato da un caffè aromatico, un classico della colazione italiana.",
+    "quantity": "1 cornetto + 150ml caffè",
+    "calorie": "220kcal"
+  },
+  {
+    "code": "B006",
+    "name": "Frutta fresca",
+    "description": "Una selezione di frutta fresca di stagione tagliata a pezzi, ricca di vitamine e fibre naturali.",
+    "quantity": "200g",
+    "calorie": "100kcal"
+  },
+  {
+    "code": "B007",
+    "name": "Latte e cereali",
+    "description": "Latte fresco accompagnato da cereali integrali croccanti, ideale per una colazione equilibrata e saziante.",
+    "quantity": "250ml + 30g cereali",
+    "calorie": "180kcal"
+  },
+  {
+    "code": "B008",
+    "name": "Pane e burro",
+    "description": "Fette di pane fresco spalmate con burro cremoso, un’opzione semplice e gustosa per iniziare la giornata.",
+    "quantity": "2 fette",
+    "calorie": "150kcal"
+  },
+  {
+    "code": "B009",
+    "name": "Latte e biscotti",
+    "description": "Latte fresco servito con biscotti croccanti, perfetto per una colazione dolce e nutriente.",
+    "quantity": "250ml + 2 biscotti",
+    "calorie": "180kcal"
+  },
+  {
+    "code": "B010",
+    "name": "Yogurt e frutta",
+    "description": "Yogurt naturale accompagnato da frutta fresca tagliata a pezzi, ottimo per una colazione leggera e vitaminica.",
+    "quantity": "150g yogurt + 100g frutta",
+    "calorie": "160kcal"
+  },
+  {
     "code": "P001",
     "name": "Pasta al sugo",
-    "description": "Un piatto semplice e nutriente con pomodoro fresco...",
+    "description": "Pasta al dente con sugo di pomodoro fresco e basilico aromatico, un piatto semplice e gustoso per il pranzo.",
     "quantity": "150g",
     "calorie": "320kcal"
+  },
+  {
+    "code": "P002",
+    "name": "Riso al pomodoro",
+    "description": "Riso leggero condito con un sugo di pomodoro fresco e un filo di olio extravergine d'oliva, ideale per un pasto equilibrato.",
+    "quantity": "150g",
+    "calorie": "310kcal"
+  },
+  {
+    "code": "P003",
+    "name": "Lasagne",
+    "description": "Lasagne al forno con ragù di carne e besciamella cremosa, gratinate al punto giusto per un gusto ricco e avvolgente.",
+    "quantity": "180g",
+    "calorie": "400kcal"
+  },
+  {
+    "code": "P004",
+    "name": "Gnocchi al pomodoro",
+    "description": "Gnocchi di patate soffici conditi con sugo di pomodoro fresco e una spolverata di parmigiano, un classico comfort food.",
+    "quantity": "180g",
+    "calorie": "350kcal"
+  },
+  {
+    "code": "P005",
+    "name": "Pasta con verdure",
+    "description": "Pasta integrale con verdure di stagione saltate leggermente, un piatto sano e ricco di fibre.",
+    "quantity": "150g",
+    "calorie": "330kcal"
+  },
+  {
+    "code": "P006",
+    "name": "Risotto ai funghi",
+    "description": "Risotto cremoso preparato con funghi freschi e una punta di burro, dal sapore intenso e avvolgente.",
+    "quantity": "180g",
+    "calorie": "370kcal"
+  },
+  {
+    "code": "P007",
+    "name": "Pasta al pesto",
+    "description": "Pasta condita con pesto genovese fresco, preparato con basilico, pinoli e olio extravergine d’oliva.",
+    "quantity": "150g",
+    "calorie": "340kcal"
+  },
+  {
+    "code": "P008",
+    "name": "Pasta al ragù",
+    "description": "Pasta al dente servita con ragù di carne saporito, un piatto tradizionale e sostanzioso.",
+    "quantity": "150g",
+    "calorie": "360kcal"
+  },
+  {
+    "code": "P009",
+    "name": "Riso con verdure",
+    "description": "Riso leggero condito con verdure miste cotte al vapore, un pasto sano e gustoso.",
+    "quantity": "150g",
+    "calorie": "320kcal"
+  },
+  {
+    "code": "S001",
+    "name": "Pollo arrosto",
+    "description": "Pollo arrosto dorato, insaporito con erbe aromatiche e servito caldo, perfetto per un pranzo nutriente.",
+    "quantity": "120g",
+    "calorie": "250kcal"
+  },
+  {
+    "code": "S002",
+    "name": "Filetto di pesce",
+    "description": "Filetto di pesce delicato cotto al forno con un filo d’olio e aromi naturali, leggero e saporito.",
+    "quantity": "120g",
+    "calorie": "200kcal"
+  },
+  {
+    "code": "S003",
+    "name": "Polpettone",
+    "description": "Polpettone di carne al forno con un cuore morbido e saporito, accompagnato da un leggero sughetto.",
+    "quantity": "120g",
+    "calorie": "260kcal"
+  },
+  {
+    "code": "S004",
+    "name": "Tacchino arrosto",
+    "description": "Tacchino arrosto succoso, aromatizzato con rosmarino e spezie leggere, ideale per un pasto completo.",
+    "quantity": "120g",
+    "calorie": "240kcal"
+  },
+  {
+    "code": "S005",
+    "name": "Salmone al forno",
+    "description": "Filetto di salmone al forno con una spruzzata di limone, ricco di omega-3 e dal sapore delicato.",
+    "quantity": "120g",
+    "calorie": "220kcal"
+  },
+  {
+    "code": "S006",
+    "name": "Bistecca",
+    "description": "Bistecca di manzo alla griglia, tenera e saporita, servita con un leggero condimento di erbe.",
+    "quantity": "150g",
+    "calorie": "300kcal"
+  },
+  {
+    "code": "S007",
+    "name": "Pollo al forno",
+    "description": "Pollo al forno speziato, dorato all’esterno e succoso all’interno, ottimo accompagnato da contorni leggeri.",
+    "quantity": "120g",
+    "calorie": "250kcal"
+  },
+  {
+    "code": "S008",
+    "name": "Polpettine",
+    "description": "Polpettine di carne al sugo, morbide e saporite, ideali per un pranzo casalingo.",
+    "quantity": "120g",
+    "calorie": "260kcal"
+  },
+  {
+    "code": "S009",
+    "name": "Pesce al vapore",
+    "description": "Filetto di pesce cotto al vapore, leggero e delicato, ideale per chi cerca un pasto sano e nutriente.",
+    "quantity": "120g",
+    "calorie": "200kcal"
+  },
+  {
+    "code": "C001",
+    "name": "Patate arrosto",
+    "description": "Patate al forno croccanti fuori e morbide dentro, leggermente condite con olio e rosmarino.",
+    "quantity": "100g",
+    "calorie": "150kcal"
+  },
+  {
+    "code": "C002",
+    "name": "Insalata mista",
+    "description": "Insalata fresca di stagione con lattuga, pomodori e verdure miste, leggera e vitaminica.",
+    "quantity": "100g",
+    "calorie": "50kcal"
+  },
+  {
+    "code": "C003",
+    "name": "Carote al vapore",
+    "description": "Carote dolci cotte al vapore, mantenendo tutto il loro sapore e i nutrienti naturali.",
+    "quantity": "100g",
+    "calorie": "40kcal"
+  },
+  {
+    "code": "C004",
+    "name": "Zucchine al vapore",
+    "description": "Zucchine fresche cotte al vapore, condite leggermente con olio d’oliva e un pizzico di sale.",
+    "quantity": "100g",
+    "calorie": "35kcal"
+  },
+  {
+    "code": "C005",
+    "name": "Piselli al vapore",
+    "description": "Piselli freschi cotti al vapore, dolci e croccanti, perfetti come contorno leggero.",
+    "quantity": "100g",
+    "calorie": "50kcal"
+  },
+  {
+    "code": "C006",
+    "name": "Spinaci al vapore",
+    "description": "Spinaci freschi cotti al vapore, ricchi di ferro e nutrienti, dal sapore delicato.",
+    "quantity": "100g",
+    "calorie": "40kcal"
+  },
+  {
+    "code": "C007",
+    "name": "Insalata verde",
+    "description": "Insalata verde fresca con lattuga e spinaci, croccante e leggera, ottima come contorno.",
+    "quantity": "100g",
+    "calorie": "40kcal"
+  },
+  {
+    "code": "DF001",
+    "name": "Mela",
+    "description": "Mela fresca di stagione, croccante e succosa, perfetta come snack o dessert leggero.",
+    "quantity": "1 pezzo",
+    "calorie": "80kcal"
+  },
+  {
+    "code": "DF002",
+    "name": "Banana",
+    "description": "Banana dolce e morbida, ricca di potassio e vitamine, ideale come frutta di fine pasto.",
+    "quantity": "1 pezzo",
+    "calorie": "90kcal"
+  },
+  {
+    "code": "DF003",
+    "name": "Pera",
+    "description": "Pera succosa e dolce, perfetta per chi ama i frutti delicati e rinfrescanti.",
+    "quantity": "1 pezzo",
+    "calorie": "80kcal"
+  },
+  {
+    "code": "DF004",
+    "name": "Kiwi",
+    "description": "Kiwi fresco tagliato a pezzi, ricco di vitamina C e dal gusto leggermente acidulo.",
+    "quantity": "1 pezzo",
+    "calorie": "50kcal"
+  },
+  {
+    "code": "DF005",
+    "name": "Arancia",
+    "description": "Arancia fresca di stagione, dolce e succosa, perfetta per un tocco vitaminico al termine del pasto.",
+    "quantity": "1 pezzo",
+    "calorie": "60kcal"
+  },
+  {
+    "code": "DF006",
+    "name": "Uva",
+    "description": "Uva fresca, dolce e succosa, ideale come frutta di fine pasto o spuntino leggero.",
+    "quantity": "100g",
+    "calorie": "70kcal"
+  },
+  {
+    "code": "DF007",
+    "name": "Tiramisu",
+    "description": " Tiramisu composto da strati di savoiardi inzuppati nel caffè e ricoperti da una crema a base di mascarpone, uova e zucchero.",
+    "quantity": "100g",
+    "calorie": "400kcal"
+  },
+  {
+    "code": "DF008",
+    "name": "Fragole",
+    "description": "Fragole fresche di stagione, dolci e succose, ideali per completare il pasto con gusto leggero.",
+    "quantity": "100g",
+    "calorie": "35kcal"
   }
 ]

@@ -29,41 +29,41 @@
         <button (click)="nextDay()" >{{ nextDayDate.getDate()}}<br>{{ nextDayDate | date: 'MMM' }}</button>
     </div>
     <div *ngIf="currentMenu; else noMenu">
-        <div class="menu-section"> 
+        <div class="menu-section" *ngIf="currentMenu.breakfast"> 
             <h3>COLAZIONE</h3> 
-            <div class="item" (click)="goToMeal(currentMenu.breakfast.code)"> 
+            <div class="item" (click)="goToMeal(currentMenu.breakfast)"> 
                 <img [src]="currentMenu.breakfast.image" alt="breakfast" /> 
                 <span>{{ currentMenu.breakfast.name }}</span> 
             </div>
          </div> 
-         <div class="menu-section"> 
+         <div class="menu-section" *ngIf="currentMenu.first"> 
             <h3>FIRST PLATE</h3> 
-            <div class="item"> 
+            <div class="item"  (click)="goToMeal(currentMenu.first)"> 
                 <img [src]="currentMenu.first.image" alt="first" />
                 <span>{{ currentMenu.first.name }}</span> 
             </div> 
         </div> 
-        <div class="menu-section"> 
+        <div class="menu-section" *ngIf="currentMenu.second"> 
             <h3>SECOND PLATE</h3>
-            <div class="item">
+            <div class="item" (click)="goToMeal(currentMenu.second)">
                 <img [src]="currentMenu.second.image" alt="second" /> 
                 <span>{{ currentMenu.second.name }}</span> 
             </div> 
         </div> 
-        <div class="menu-section"> 
+        <div class="menu-section" *ngIf="currentMenu.side"> 
             <h3>SIDE MEAL</h3> 
-            <div class="item"> 
+            <div class="item" (click)="goToMeal(currentMenu.side)"> 
                 <img [src]="currentMenu.side.image" alt="side" /> 
                 <span>{{ currentMenu.side.name }}</span> 
             </div> 
         </div> 
-        <div class="menu-section"> 
+        <div class="menu-section" *ngIf="currentMenu.dessertFruit"> 
             <h3>DESSERT / FRUIT</h3> 
-            <div class="item"> 
+            <div class="item" (click)="goToMeal(currentMenu.dessertFruit)"> 
                 <img [src]="currentMenu.dessertFruit.image" alt="frutta" /> 
                 <span>{{ currentMenu.dessertFruit.name }}</span> 
             </div> 
-            </div>
+        </div>
 
     </div>
     <ng-template #noMenu>

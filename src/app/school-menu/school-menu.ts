@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DailyMenu, MenuService } from '../services/menu-service';
-import { CommonModule, DatePipe } from '@angular/common';
+import {  MenuService, DailyMenu, MenuItem  } from '../services/menu-service';
 import { Router } from '@angular/router';
 
 
@@ -13,18 +12,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./school-menu.css']
 })
 export class SchoolMenu implements OnInit{
-  
-  title = 'School-Menu'
-  currentDay: Date =  new Date(2025, 8, 12);
-  prevDayDate = new Date(this.currentDay);
-  nextDayDate = new Date(this.currentDay);
+  menu: DailyMenu[] = [];
   currentMenu?: DailyMenu;
-
+  title = 'School-Menu';
   studentName = '';
   school = '';
   studentClass = ''
 
-  constructor(private menuService: MenuService, private router: Router,  private datePipe: DatePipe) {}
+  currentDay: Date =  new Date(2025, 8, 1);
+  prevDayDate = new Date(this.currentDay);
+  nextDayDate = new Date(this.currentDay);
+  
+  constructor(private menuService: MenuService, private router: Router) {}
   
 
   ngOnInit(): void {
@@ -71,7 +70,11 @@ export class SchoolMenu implements OnInit{
       this.router.navigate(['/meal', code]);
     }
   }
-  goToMeal(code: string): void {
-    this.router.navigate(['/meal', code]);
+  goToMeal(item: MenuItem | undefined) {
+    if (!item || !item.code) {
+      console.error('Cannot navigate, item or code missing', item);
+      return;
+    }
+    this.router.navigate(['/meal', item.code]);
   }
 }

@@ -6,6 +6,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { App } from './app';
 import { SchoolMenu } from './school-menu/school-menu';
 import { DatePipe } from '@angular/common';
+import { MealDetails } from "./meal-details/meal-details";
 
 @NgModule({
   declarations: [
@@ -15,8 +16,9 @@ import { DatePipe } from '@angular/common';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
-  ],
+    AppRoutingModule,
+    MealDetails
+],
   providers: [DatePipe],
   bootstrap: [App]
 })
