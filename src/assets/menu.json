@@ -73,7 +73,7 @@
   },
   {
     "date": "2025-09-10",
-    "breakfast": { "code": "B010", "name": "Yogurt e frutta", "image": "assets/yogurt_frutta.jpg" },
+    "breakfast": { "code": "B009", "name": "Yogurt e frutta", "image": "assets/yogurt_frutta.jpg" },
     "first": { "code": "P004", "name": "Gnocchi al pomodoro", "image": "assets/gnocchi.jpg" },
     "second": { "code": "S004", "name": "Tacchino arrosto", "image": "assets/tacchino.jpg" },
     "side": { "code": "C003", "name": "Carote al vapore", "image": "assets/carrots.jpg" },

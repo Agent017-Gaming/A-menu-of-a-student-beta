@@ -6,6 +6,7 @@ import { MealDetails } from './meal-details/meal-details';
 export const routes: Routes = [
   { path: 'menu', component: SchoolMenu },
   { path: 'meal/:code', component: MealDetails },
+  { path: 'menu/:date', component: SchoolMenu },
   { path: '', redirectTo: '/menu', pathMatch: 'full' }
 ];
 

@@ -9,6 +9,7 @@ export interface MealDetailsItem {
   description: string;
   quantity: string;
   calorie: string;
+  image: string;
 }
 
 @Component({
@@ -21,6 +22,7 @@ export class MealDetails implements OnInit{
 
   code: string | null=null ;
   meal?: MealDetailsItem;
+  returnDate?: string;
   constructor(private route: ActivatedRoute, private http: HttpClient, private router: Router){}
   ngOnInit(): void {
     this.code = this.route.snapshot.paramMap.get('code');
@@ -31,6 +33,12 @@ export class MealDetails implements OnInit{
       return;
     }
 
+    const dateParam = this.route.snapshot.queryParamMap.get('date');
+    
+    if (dateParam) {
+      this.returnDate = dateParam; // store it for goBack
+    }
+    
     this.http.get<any[]>('assets/meal_details.json').subscribe(data => {
       this.meal = data.find(p => p.code === this.code);
       
@@ -41,6 +49,10 @@ export class MealDetails implements OnInit{
     });
   }
   goBack() {
+    if (this.returnDate) {
+      this.router.navigate(['/menu', this.returnDate]);
+    } else {
     this.router.navigate(['/menu']);
+    }
   }
 }

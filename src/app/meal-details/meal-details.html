@@ -1,7 +1,11 @@
 <div class="cover">
   <div *ngIf="meal; else notFound" class="meal-tab">
     <button class="back-btn" (click)="goBack()">⬅ Return back</button>
-
+    <div>
+      <img [src]="meal.image" alt="{{ meal.name }}" class="meal-image" />
+    </div>
+    
+    
     <h2>{{ meal.name }}</h2>
     <p>{{ meal.description }}</p>
     <p><strong>Quantity:</strong> {{ meal.quantity }}</p>

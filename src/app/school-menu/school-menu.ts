@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {  MenuService, DailyMenu, MenuItem  } from '../services/menu-service';
-import { Router } from '@angular/router';
-
-
+import { ActivatedRoute, Router } from '@angular/router';
 
 
 @Component({
@@ -19,14 +17,21 @@ export class SchoolMenu implements OnInit{
   school = '';
   studentClass = ''
 
-  currentDay: Date =  new Date(2025, 8, 1);
+  currentDay = new Date();
   prevDayDate = new Date(this.currentDay);
   nextDayDate = new Date(this.currentDay);
   
-  constructor(private menuService: MenuService, private router: Router) {}
+  constructor(private route: ActivatedRoute, private menuService: MenuService, private router: Router) {}
   
 
   ngOnInit(): void {
+    const dateParam = this.route.snapshot.paramMap.get('date');
+  if (dateParam) {
+    const parsed = new Date(dateParam);
+    if (!isNaN(parsed.getTime())) {
+      this.currentDay = parsed;
+    }
+  }
     this.studentName = this.menuService.studentName;
     this.school = this.menuService.school;
     this.studentClass = this.menuService.studentClass;
@@ -35,20 +40,21 @@ export class SchoolMenu implements OnInit{
   }
 
   nextDay(): void{
-    const newDate = new Date(this.currentDay);
-    newDate.setDate(this.currentDay.getDate() + 1);
-    this.currentDay = newDate;
+    this.currentDay.setDate(this.currentDay.getDate() + 1);
+    this.navigateToDate(this.currentDay);
     this.updateCurrentMenu();
     this.updateDays();
   }
   prevDay(): void{
-    const newDate = new Date(this.currentDay);
-    newDate.setDate(this.currentDay.getDate() - 1);
-    this.currentDay = newDate;
+    this.currentDay.setDate(this.currentDay.getDate() - 1);
+    this.navigateToDate(this.currentDay);
     this.updateCurrentMenu();
     this.updateDays();
   }
-
+  private navigateToDate(date: Date): void {
+    const dateStr = date.toISOString().split('T')[0];
+    this.router.navigate(['/menu', dateStr]);
+  }
 
   private updateCurrentMenu(): void {
     this.menuService.getMenuForDate(this.currentDay).subscribe(menu => {
@@ -75,6 +81,7 @@ export class SchoolMenu implements OnInit{
       console.error('Cannot navigate, item or code missing', item);
       return;
     }
-    this.router.navigate(['/meal', item.code]);
+    const dateStr = this.currentDay.toISOString().split('T')[0];
+    this.router.navigate(['/meal', item.code], { queryParams: { date: dateStr } });
   }
 }
