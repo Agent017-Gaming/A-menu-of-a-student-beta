@@ -1,8 +1,11 @@
+<!-- Main container for meal details -->
 <div class="cover">
+  <!-- Display meal info if 'meal' exists, otherwise show notFound template -->
   <div *ngIf="meal; else notFound" class="meal-tab">
-    <button class="back-btn" (click)="goBack()">⬅ Return back</button>
+    <button class="back-btn" (click)="goBack()">⬅ Return back</button>   <!-- Back button to navigate to menu page -->
+    
     <div>
-      <img [src]="meal.image" alt="{{ meal.name }}" class="meal-image" />
+      <img [src]="meal.image" alt="{{ meal.name }}" class="meal-image" /> <!-- Meal image -->
     </div>
     
     
@@ -11,7 +14,7 @@
     <p><strong>Quantity:</strong> {{ meal.quantity }}</p>
     <p><strong>Calorie:</strong> {{ meal.calorie }}</p>
   </div>
-
+  <!-- Fallback if meal is not found -->
   <ng-template #notFound>
     <p class="not-found">We don’t have any data for this meal, we are sorry.</p>
   </ng-template>

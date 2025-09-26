@@ -1,34 +1,46 @@
-
+<!-- Container for the whole menu page -->
 <div class="menu-container">
+    <!-- Header with student info, title, and menu button -->
     <div class="header">
-  <div class="header-left">
-    <div class="student-details">
-      <h2>{{studentName}}</h2>
-      <h3>{{school}}, {{studentClass}}</h3>
+        <!-- Left side: student details -->
+        <div class="header-left">
+            <div class="student-details">
+            <h2>{{studentName}}</h2>
+            <h3>{{school}}, {{studentClass}}</h3>
+            </div>
+        </div>
+        <!-- Center: page title -->
+        <div class="header-center">
+            <h1>{{ title }}</h1>
+        </div>
+        <!-- Right: menu button (click shows alert) Doesnt absolutely nothing -->
+        <div class="header-right">
+            <div class="menu-button" (click)="showWorkMessage()" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <div class="header-center">
-    <h1>{{ title }}</h1>
-  </div>
-
-  <div class="header-right">
-    <div class="menu-button" (click)="showWorkMessage()" aria-label="Menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </div>
-</div>
+    <!-- Date navigation section -->
     <div class="date-nav">
-        <button (click)="prevDay()" >{{ prevDayDate.getDate()}}<br>{{ prevDayDate | date: 'MMM' }}</button>
+        <!-- Previous day button -->
+        <button (click)="prevDay()">
+            {{ prevDayDate.getDate()}}
+            <br>
+            {{ prevDayDate | date: 'MMM' }}
+        </button>
+        <!-- Current day display -->
         <div class="current-day">
             <div class="day">{{ currentDay.getDate() }}</div>
             <div class="month">{{ currentDay | date: 'MMM' }}</div>
         </div>
+        <!-- Next day button -->
         <button (click)="nextDay()" >{{ nextDayDate.getDate()}}<br>{{ nextDayDate | date: 'MMM' }}</button>
     </div>
+    <!-- Menu items for the current day -->
     <div *ngIf="currentMenu; else noMenu">
+        <!-- Breakfast section -->
         <div class="menu-section" *ngIf="currentMenu.breakfast"> 
             <h3>COLAZIONE</h3> 
             <div class="item" (click)="goToMeal(currentMenu.breakfast)"> 
@@ -36,6 +48,7 @@
                 <span>{{ currentMenu.breakfast.name }}</span> 
             </div>
          </div> 
+         <!-- First Plate section -->
          <div class="menu-section" *ngIf="currentMenu.first"> 
             <h3>FIRST PLATE</h3> 
             <div class="item"  (click)="goToMeal(currentMenu.first)"> 
@@ -43,6 +56,7 @@
                 <span>{{ currentMenu.first.name }}</span> 
             </div> 
         </div> 
+        <!-- Second plate section -->
         <div class="menu-section" *ngIf="currentMenu.second"> 
             <h3>SECOND PLATE</h3>
             <div class="item" (click)="goToMeal(currentMenu.second)">
@@ -50,6 +64,7 @@
                 <span>{{ currentMenu.second.name }}</span> 
             </div> 
         </div> 
+        <!-- Side Meal section-->
         <div class="menu-section" *ngIf="currentMenu.side"> 
             <h3>SIDE MEAL</h3> 
             <div class="item" (click)="goToMeal(currentMenu.side)"> 
@@ -57,6 +72,7 @@
                 <span>{{ currentMenu.side.name }}</span> 
             </div> 
         </div> 
+        <!-- Dessert/Fruit section-->
         <div class="menu-section" *ngIf="currentMenu.dessertFruit"> 
             <h3>DESSERT / FRUIT</h3> 
             <div class="item" (click)="goToMeal(currentMenu.dessertFruit)"> 
@@ -66,6 +82,7 @@
         </div>
 
     </div>
+    <!--Days Where no meal was added or unavailable-->
     <ng-template #noMenu>
         <p>No menu is available for this Day</p>
     </ng-template>

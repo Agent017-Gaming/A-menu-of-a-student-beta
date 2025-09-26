@@ -1,27 +1,28 @@
-/* Container */
+/* Container for the entire menu page */
 .menu-container {
   padding: 1rem;
   font-family: 'Arial', sans-serif;
   background: #fff;
-  min-height: 100vh;
+  min-height: 100vh; /*Note: full viewport height */
 }
 
-/* Header bar */
+/* Header bar styling */
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* space between left, center, right */
   align-items: center;
-  background: #ffc107;
+  background: #ffc107;          /* yellow header */
   padding: 0.8rem 1rem;
-  flex-wrap: wrap; /* allows content to stack on small screens */
+  flex-wrap: wrap;                /* allows content to stack on small screens */
   position: relative;
 }
 
-/* Flex containers */
+/* Flex containers inside header */
 .header-left, .header-center, .header-right {
   display: flex;
   align-items: center;
 }
+/* Hamburger menu button */
 .menu-button {
   position: absolute;
   right: 1rem;
@@ -43,6 +44,7 @@
   border-radius: 2px;
 }
 
+/* Student details styling */
 
 .student-details h2 {
   margin: 0;
@@ -55,7 +57,7 @@
   font-size: 0.8rem;
 }
 
-
+/* Date navigation section */
 .date-nav {
   display: flex;
   justify-content: space-around;
@@ -73,13 +75,13 @@
   text-align: center;
 }
 
+/* Current day display */
 .current-day {
   text-align: center;
   font-weight: bold;
 }
 
-
-
+/* Menu section styling */
 .menu-section {
   margin: 2rem auto;
   text-align: center;
@@ -92,9 +94,9 @@
   color: #666;
   margin-bottom: 0.8rem;
   text-transform: uppercase;
-
 }
 
+/* Individual menu items */
 .item {
   display: flex;
   cursor: pointer;
@@ -109,12 +111,14 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: cover; /*Note: ensures image fits inside circle */
 }
 .menu-section .item span {
   font-size: 1rem;
-  
 }
+
+
+/* Responsive design for small screens */
 @media (max-width: 480px) {
   .header-title h1 {
     font-size: 1.2rem;
